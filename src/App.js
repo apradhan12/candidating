@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import SignInButton from './SignInButton';
+import SignUpButton from './SignUpButton.js';
 import './App.css';
 
+//import { render } from '@testing-library/react';
+
 function App() {
-  return (
-    <div className="App">
-      <h1>Sign Up</h1>
-      <header className="App-header">
-        <form>
-          <label>
-            Name:
-            <input type="text" name="Name" />
-          </label>
-          <label>
-            Zip Code:
-            <input type="text" name = "Zip Code" />
-          </label>
-        </form>
-        <input type="submit" value="Submit" />
-      </header>
-    </div>
-  );
+  
+    return (
+      <div className="Candidating">
+        
+        <header className="App-header">
+        <h1>Candidating</h1>
+          
+          <SignUpButton />
+           
+            
+            
+            <SignInButton />
+            
+            
+        
+        </header>
+      </div>
+    );
 }
+
+
+
 
 export default App;
