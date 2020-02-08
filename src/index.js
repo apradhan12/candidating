@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import CreateAccount from './CreateAccount'
+import testDropdown from './testDropdown'
 import * as serviceWorker from './serviceWorker';
 import DiscreteSlider from './testSlider';
 
