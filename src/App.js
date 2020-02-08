@@ -5,15 +5,19 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Sign In</h1>
+      <h1>Sign Up</h1>
       <header className="App-header">
         <form>
           <label>
             Name:
-            <input type="text" name="name" />
+            <input type="text" name="Name" />
           </label>
-          <input type="submit" value="Submit Name" />
-      </form>
+          <label>
+            Zip Code:
+            <input type="text" name = "Zip Code" />
+          </label>
+        </form>
+        <input type="submit" value="Submit" />
       </header>
     </div>
   );
