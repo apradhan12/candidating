@@ -7,10 +7,10 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: right;
+    justify-content: left;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: gainsboro;
 }
 
 .App-body {
@@ -18,10 +18,11 @@
     color: #282c34;
     min-height: 25vh;
     min-width: 10vh;
-    align-items: left;
-    justify-content: left;
+    align-items: right;
+    
 }
 
 .App-button {
     color: #282c34;
+    text-align: right;
 }
