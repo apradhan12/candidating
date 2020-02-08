@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import CreateAccount from './CreateAccount'
 import * as serviceWorker from './serviceWorker';
+import DiscreteSlider from './testSlider';
 
 ReactDOM.render(<CreateAccount />, document.getElementById('root'));
 
