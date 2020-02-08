@@ -21,7 +21,7 @@ function App() {
 										<input type="text" name="name" />
 									</label>
 									<input type="submit" value="Submit" />
-								</form>
+								</form>	
 							</header>
 						</div>
 					</Route>

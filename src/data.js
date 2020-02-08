@@ -4,9 +4,14 @@ export default [
 			'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F0%2F0d%2FJoe_Biden%2C_official_photo_portrait_2-cropped.jpg&f=1&nofb=1',
 		name: 'Joe Biden',
 		party: 'Democrat',
-		age: 32,
-		distance: '4 miles away',
-		text: "My nickname is Gilette because I'm the best a man can get. Also I will cut you."
+		website: 'https://joebiden.com/',
+		Issues: 
+		{
+			Abortion: 'Opposed',
+			Guns: 'Ban on assault weapons, universal background checks',
+			Education: 'Erase debt for low-income individuals',
+			Foreign_Policy : 
+		}
 	},
 	{
 		pic:
