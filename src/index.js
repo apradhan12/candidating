@@ -5,6 +5,7 @@ import App from './App';
 import CreateAccount from './CreateAccount'
 import testDropdown from './testDropdown'
 import * as serviceWorker from './serviceWorker';
+import DiscreteSlider from './testSlider';
 
 ReactDOM.render(<App/>, document.getElementById('root'));
 

@@ -1,41 +1,37 @@
+import './App.css';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+
+import Deck from './Deck';
+import Matches from './Matches';
 import React from 'react';
 
-import SignInButton from './SignInButton';
-import SignUpButton from './SignUpButton.js';
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect
-} from "react-router-dom";
-
-//import { render } from '@testing-library/react';
-
 function App() {
-  
-    return (
-      <div className="Candidating">
-        
-        <header className="App-header">
-        <h1>Candidating</h1>
-          
-          <SignUpButton/>
-          <SignInButton />
-
-          <Router>
-            <div>
-              <Switch>
-                
-              </Switch>
-            </div>
-          </Router>
-
-
-        </header>
-      </div>
-    );
+	return (
+		<Router>
+			<div>
+				<Switch>
+					<Route path="/">
+						<div className="App">
+							<h1>Sign In</h1>
+							<header className="App-header">
+								<form>
+									<label>
+										Name:
+										<input type="text" name="name" />
+									</label>
+									<input type="submit" value="Submit" />
+								</form>
+							</header>
+						</div>
+					</Route>
+					<Route path="/matching">
+						<Deck />
+					</Route>
+					<Route path="/matches" component={Matches} />
+				</Switch>
+			</div>
+		</Router>
+	);
 }
 
 export default App;
