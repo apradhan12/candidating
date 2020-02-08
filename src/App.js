@@ -1,12 +1,4 @@
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect
-} from "react-router-dom";
-
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import Deck from './Deck';

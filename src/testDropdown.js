@@ -1,5 +1,4 @@
 import React from 'react';
-import {Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 
 
 
@@ -13,10 +12,9 @@ function App() {
     <a href="#">Link 3</a>
   </div>
 </div>
-      
+
 
     );
   }
-  
+
   export default App;
-  
