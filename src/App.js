@@ -5,6 +5,7 @@ import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Deck from './Deck';
 import Matches from './Matches';
 import React from 'react';
+import CreateAccount from './CreateAccount';
 
 
 function App() {
@@ -36,7 +37,10 @@ function App() {
 				</header>
 			  </div>
 			</Route>
-			  <Route path="/matching">
+      <Route path="/createaccount">
+						<CreateAccount />
+			</Route>
+			<Route path="/matching">
 				<Deck />
 			  </Route>
 			<Route path="/matches" component={Matches} />
