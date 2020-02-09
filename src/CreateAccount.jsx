@@ -122,7 +122,8 @@ class CreateAccount extends React.Component {
 								name="zipCode"
 								id="zipCode"
 								placeholder="Enter your zip code"
-								className="form-control"
+                className="form-control"
+                maxLength="5"
 							/>
 						</label>
 						<h3>Policy Importance (0-10)</h3>
