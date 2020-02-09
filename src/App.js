@@ -9,34 +9,36 @@ import React from 'react';
 
 function App() {
 	return (
-	  <Router>
-		<div>
-		  <Switch>
-      <nav className="navbar navbar-light">Candidating</nav>
-			<Route exact path="/">
-			  <div className="App">
-				  <h1><b>Candidating</b></h1>
-				  <button className = "App-button">
-					<Link to="/createaccount">
-					  <button className="btn btn-primary">Sign Up</button>
-					</Link>
-				  </button>
-				  <button className = "App-button">
-					<Link to="/createaccount">
-					  <button className="btn btn-primary">Sign In</button>
-					</Link>
-				  </button>
-			  </div>
-			</Route>
-      		<Route path="/createaccount">
-				<CreateAccount />
-			</Route>
-			<Route path="/matching">
-				<Deck />
-			</Route>
-			<Route path="/matches" component={Matches} />
-		  </Switch>
-		</div>
+		<Router>
+			<div>
+				<nav className="navbar navbar-light">Candidating</nav>
+				<Switch>
+					<Route exact path="/">
+						<div className="App">
+							<h1>
+								<b>Candidating</b>
+							</h1>
+							<button className="App-button">
+								<Link to="/createaccount">
+									<button className="btn btn-primary">Sign Up</button>
+								</Link>
+							</button>
+							<button className="App-button">
+								<Link to="/createaccount">
+									<button className="btn btn-primary">Sign In</button>
+								</Link>
+							</button>
+						</div>
+					</Route>
+					<Route path="/createaccount">
+						<CreateAccount />
+					</Route>
+					<Route path="/matching">
+						<Deck />
+					</Route>
+					<Route path="/matches" component={Matches} />
+				</Switch>
+			</div>
 		</Router>
 	);
 }
