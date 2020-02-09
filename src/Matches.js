@@ -1,15 +1,10 @@
 import './Matches.css';
 
 import React from 'react';
-import data from './data';
+import data from './localData.js';
 
 class Matches extends React.Component {
 	render() {
-		console.log(this.props.location.state.matches);
-		// const { po } = this.props.location.state.matches;
-
-		// console.log(matches);
-
 		const tbody = [];
 
 		for (let i = 0; i < this.props.location.state.matches.length; i++) {
@@ -17,10 +12,22 @@ class Matches extends React.Component {
 				<tr key={i}>
 					<td>
 						<div>
-							<img className="candidate-icon" src={data[this.props.location.state.matches[i]].pic} />
+							<img
+								className="candidate-icon"
+								alt="candidate"
+								src={data[this.props.location.state.matches[i]].pic}
+							/>
 						</div>
 					</td>
-					<td>{data[this.props.location.state.matches[i]].name}</td>
+					<td>
+						<a
+							href={data[this.props.location.state.matches[i]].website}
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							{data[this.props.location.state.matches[i]].name}
+						</a>
+					</td>
 					<td>{data[this.props.location.state.matches[i]].party}</td>
 				</tr>
 			);
@@ -34,6 +41,11 @@ class Matches extends React.Component {
 						<thead />
 						<tbody>{tbody}</tbody>
 					</table>
+					<div class="register">
+						<a href="https://vote.gov/" rel="noopener noreferrer" target="_blank">
+							Register to vote!
+						</a>
+					</div>
 				</div>
 			</div>
 		);
