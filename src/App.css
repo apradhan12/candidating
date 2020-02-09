@@ -28,11 +28,15 @@
 .App-slider {
 	display: flex;
 	flex-direction: row;
-	margin-left: 8pt;
+	margin-left: 6pt;
 }
 
 .App-link {
 	color: #61dafb;
+}
+
+.App-signup {
+	text-align: center;
 }
 
 @keyframes App-logo-spin {

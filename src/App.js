@@ -19,11 +19,12 @@ function App() {
 				<Switch>
 					<Route exact path="/">
 						<div className="App">
+							<div>
+								<h1>Get Started!</h1>
+								<h3>Find your perfect candidate</h3>
+							</div>
 							<Link to="/createaccount">
-								<button className="btn btn-primary m-1">Sign Up</button>
-							</Link>
-							<Link to="/createaccount">
-								<button className="btn btn-primary m-1">Sign In</button>
+								<button className="btn btn-primary m-2">Sign Up</button>
 							</Link>
 						</div>
 					</Route>
