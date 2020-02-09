@@ -41,7 +41,7 @@ export default [
 
 		name: 'Pete Buttigieg',
 		party: 'Democrat',
-		keyIssues: 'foo, bar,asdf',
+		keyIssues: 'Civil Rights, Economy',
 		website: 'https://peteforamerica.com/meet-pete/',
 		issues: [
 			{
@@ -71,6 +71,29 @@ export default [
 			{
 				name: 'Guns',
 				opinion: 'Universal background checks, Counter hate and extremism'
+			}
+		]
+	},
+	{
+		pic:
+			'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Amy_Klobuchar%2C_official_portrait%2C_113th_Congress.jpg/1024px-Amy_Klobuchar%2C_official_portrait%2C_113th_Congress.jpg',
+		name: 'Amy Klobuchar',
+		party: 'Democrat',
+		keyIssues: 'Healthcare, abortion rights, LGBTQA+ rights',
+		website: 'https://amyklobuchar.com/',
+		issues: [
+			{
+				name: 'Healthcare',
+				opinion: 'Expand Affordable Care Act by offering public option'
+			},
+			{
+				name: 'Gun Control',
+				opinion: 'Ban on assault weapons, universal background checks'
+			},
+			{
+				name: 'Climate',
+				opinion:
+					'Recommit to Paris Agreement, net zero emissions by 2050, refuse campaign contributions from oil companies'
 			}
 		]
 	},

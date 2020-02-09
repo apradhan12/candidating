@@ -29,28 +29,30 @@ const from = (i) => ({ rot: 0, scale: 1.5, y: -1000 });
 
 const trans = (r, s) => `scale(${s})`;
 
+shuffle(data);
+
 function Deck() {
-	let dataToUse = data;
+	// let dataToUse =
 	let [ , setState ] = useState();
 
 	const [ gone ] = useState(() => new Set());
 
 	const [ matches, setMatches ] = useState([]);
 
-	const [ props, set ] = useSprings(dataToUse.length, (i) => ({
+	const [ props, set ] = useSprings(data.length, (i) => ({
 		...to(i),
 		from: from(i)
 	}));
 
-	const parentCallback = (info) => {
-		if (info.value === '1') {
-			dataToUse = data;
-		} else {
-			dataToUse = localData;
-		}
-		console.log(dataToUse);
-		console.log(props);
-	};
+	// const parentCallback = (info) => {
+	// 	if (info.value === '1') {
+	// 		dataToUse = data;
+	// 	} else {
+	// 		dataToUse = localData;
+	// 	}
+	// 	console.log(dataToUse);
+	// 	console.log(props);
+	// };
 
 	const bind = useGesture(({ args: [ index ], down, delta: [ xDelta ], direction: [ xDir ], velocity }) => {
 		const trigger = velocity > 0.2;
@@ -89,7 +91,7 @@ function Deck() {
 	// The Deck
 	cards.push(
 		props.map(({ x, y, rot, scale }, i) => (
-			<Card i={i} x={x} y={y} rot={rot} scale={scale} trans={trans} data={dataToUse} bind={bind} key={i} />
+			<Card i={i} x={x} y={y} rot={rot} scale={scale} trans={trans} data={data} bind={bind} key={i} />
 		))
 	);
 	// }
