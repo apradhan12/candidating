@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
-import React from 'react';
+import  React, { useState } from 'react';
 import './CreateAccount.css';
 import US_STATES from './us_states';
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
@@ -47,45 +47,38 @@ function App() {
                             "Healthcare",
                             "Gun Control"
                           ]
-  const sliderAttributeHTML = sliderAttributes.map((name) =>  ( <div class="row">
-  <div class="form-group col-lg-2">
-    <label for={name}>{name}:</label>
-    <input type="range" class="form-control-range" id={name} min="0" max="10" />
-  </div>
-</div>  ))
+
+  const [sliderStates, setSliderStates] = useState({})
+  const refs = {}
+  const sliderAttributeHTML = sliderAttributes.map((name) =>  {
+    console.log("hi");
+    refs[name] = React.createRef();
+    return ( 
+    <div class="row">
+      <div class="form-group col-lg-2">
+        <label for={name}>{name}:</label>
+          <div className="App-slider">
+          <input className="App-slider"
+            type="range" class="form-control-range" id={name} min="0" max="10" value={sliderStates[name]}
+            onChange={(event) => {
+              console.log("slider states:", event.target.value);
+              const newSliderStates = sliderStates;
+              newSliderStates[name] = event.target.value;
+              setSliderStates(newSliderStates);
+              refs[name].current.innerHTML = sliderStates[name];
+            }}
+          />
+          <label className="App-slider" ref={refs[name]}>5</label>
+        </div>
+      </div>
+    </div>
+  ) } )
+  
 
   return (
     <div class="container">
       <header>
         <h1>Sign Up</h1>
-        {/* <Formik
-          initialValues={initialValues}
-          validate={validate}
-          onSubmit={onSubmit}
-          validateOnChange={false}
-          validateOnBlur={true}>
-          {({isSubmitting}) => (
-            <Form className="App-body">
-              <label>Name: </label><br />
-              <Field name="name" />
-              <ErrorMessage name="name" component="div" />
-              <label>ZIP Code: </label><br />
-              <Field name="zipCode" maxLength="5" />
-              <ErrorMessage name="zipCode" component="div" />
-              <label>City: </label><br />
-              <Field name="city" />
-              <ErrorMessage name="city" component="div" />
-              <label>State: </label><br />
-              <Field as="select" name="state">
-                {Object.keys(US_STATES).map((usState, i) => (<option value={usState} key={i}>{usState}</option>))}
-              </Field>
-              <ErrorMessage name="state" component="div" />
-              <button type="submit" disabled={isSubmitting}>
-                Submit
-              </button>
-            </Form>
-          )}
-        </Formik> */}
         <form class="App-body p-2 rounded">
           <h3>Information</h3>
           <label htmlFor="name">
