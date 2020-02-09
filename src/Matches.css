@@ -34,3 +34,8 @@ tr {
 .register {
 	text-align: center;
 }
+
+.reset-wrapper {
+	text-align: center;
+	padding: 10px;
+}

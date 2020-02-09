@@ -26,9 +26,13 @@
 }
 
 .App-slider {
-	display: flex;
-	flex-direction: row;
-	margin-left: 6pt;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.App-slider-label {
+  display: inline-block;
 }
 
 .App-link {
