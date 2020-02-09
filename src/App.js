@@ -12,23 +12,16 @@ function App() {
 	return (
 		<Router>
 			<div>
-				<nav className="navbar navbar-light">Candidating</nav>
+				<nav className="navbar navbar-light"><b>Candidating</b></nav>
 				<Switch>
 					<Route exact path="/">
 						<div className="App">
-							<h1>
-								<b>Candidating</b>
-							</h1>
-							<button className="App-button">
-								<Link to="/createaccount">
-									<button className="btn btn-primary">Sign Up</button>
-								</Link>
-							</button>
-							<button className="App-button">
-								<Link to="/createaccount">
-									<button className="btn btn-primary">Sign In</button>
-								</Link>
-							</button>
+							<Link to="/createaccount">
+								<button className="btn btn-primary m-1">Sign Up</button>
+							</Link>
+							<Link to="/createaccount">
+								<button className="btn btn-primary m-1">Sign In</button>
+							</Link>
 						</div>
 					</Route>
 					<Route path="/createaccount">

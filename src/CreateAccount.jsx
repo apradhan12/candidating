@@ -95,11 +95,9 @@ function App() {
           </label>
           <h3>Policy Importance (0-10)</h3>
           {sliderAttributeHTML}
-          <div>
-						<Link to="/matching">
-						  <button className="btn btn-primary">Create Profile</button>
-						</Link>
-					</div>
+          <Link to="/matching">
+            <button className="btn btn-primary">Create Profile</button>
+          </Link>
         </form>
       </header>
     </div>
