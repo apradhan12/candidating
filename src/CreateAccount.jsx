@@ -38,11 +38,28 @@ function App() {
     }, 400);
   }
 
+  const sliderAttributes = ["Economy",
+                            "Civil Rights",
+                            "Education",
+                            "Environment",
+                            "Foreign Policy",
+                            "Healthcare",
+                            "Gun Control"
+                          ]
+  const sliderAttributeHTML = sliderAttributes.map((name) =>  ( <div class="row">
+  <div class="form-group col-lg-2">
+    <label for={name}>{name}:</label>
+    <input type="range" class="form-control-range" id={name} min="0" max="10" />
+  </div>
+</div>  ))
+
+
+
   return (
-    <div className="App-header">
+    <div class="container">
       <header>
         <h1>Sign Up</h1>
-        <Formik
+        {/* <Formik
           initialValues={initialValues}
           validate={validate}
           onSubmit={onSubmit}
@@ -69,50 +86,25 @@ function App() {
               </button>
             </Form>
           )}
-        </Formik>
-        <form className="App-body">
+        </Formik> */}
+        <form class="App-body p-2 rounded">
           <h3>Information</h3>
           <label htmlFor="name">
                 Name:
-            <input type="text" name="Name" id="name" />
+            <input type="text" name="Name" id="name" placeholder="Enter your name" class="form-control" />
           </label>
-          <p />
+          <label htmlFor="city">
+                City:
+            <input type="text" name="City" id="city" placeholder="Enter your city" class="form-control"/>
+          </label>
           <label htmlFor="zipCode">
                 ZIP Code:
-            <input type="text" name="Zip Code" id="zipCode" />
+            <input type="text" name="Zip Code" id="zipCode" placeholder="Enter your zip code" class="form-control" />
           </label>
           <h3>Policy Importance (0-10)</h3>
-          <label>
-                Sustainability:
-            <input type="number" name="Sustainability" />
-          </label>
-          <p />
-          <label>
-                Healthcare:
-            <input type="number" name="Healthcare" />
-          </label>
-          <p />
-          <label>
-                Education:
-            <input type="number" name="Education" />
-          </label>
-          <p />
-          <label>
-                Gun Reform:
-            <input type="number" name="Gun Reform" />
-          </label>
-          <p />
-          <label>
-                Student Debt:
-            <input type="number" name="Student Deb" />
-          </label>
-          <p />
-          <label>
-                Abortion:
-            <input type="number" name="Abortion" />
-          </label>
+          {sliderAttributeHTML}
+          <input className="App-button" type="submit" value="Create Profile" class="btn btn-primary" />
         </form>
-        <input className="App-button" type="submit" value="Create Profile" />
       </header>
     </div>
   );
