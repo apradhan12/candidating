@@ -106,36 +106,6 @@ export default [
 		website: 'https://berniesanders.com/?nosplash',
 		issues: [
 			{
-<<<<<<< HEAD
-				name: 'economy',
-				opinion: 'Reform tax code, increase marginal tax rates '
-			},
-			{
-				name: 'civil rights',
-				opinion: 'backs investments in economically \“distressed\” communities, pro-choice'
-			},
-			{
-				name: 'education',
-				opinion: 'Cancel all student debt, free public university'
-			},
-			{
-				name: 'climate',
-				opinion: '100% renewable energy by 2030, Green New Deal'
-			},
-			{
-				name: 'foreign policy',
-				opinion: 'Responsibly end interventions in Afghanistan, Iraq and Syria'
-			},
-			{
-				name: 'healthcare',
-				opinion: 'Effectively end the private health insurance market, Medicare For All'
-			},
-			{
-				name: 'guns',
-				opinion: 'Expand background checks, take on the NRA'
-			}
-
-=======
 				name: 'Healthcare',
 				opinion: 'Expand Affordable Care Act by offering public option'
 			},
@@ -148,7 +118,6 @@ export default [
 				opinion:
 					'Recommit to Paris Agreement, net zero emissions by 2050, refuse campaign contributions from oil companies'
 			}
->>>>>>> 7451c1d095a805dc222074d4465e94c37d6ab980
 		]
 	},
 	{
@@ -156,40 +125,6 @@ export default [
 			'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F985858875445293056%2FRUqnwGsy_400x400.jpg&f=1&nofb=1',
 		name: 'Elizabeth Warren',
 		party: 'Democrat',
-<<<<<<< HEAD
-		keyIssues: 'foo, bar,asdf',
-		website: 'https://elizabethwarren.com/?mkwid=slPlgDlZa|pcrid|405340466863|pkw|elizabeth%20warren|pmt|e|pdv|c|slid||product||pgrid|71352540229|ptaid|kwd-40012020|&pgrid=71352540229&ptaid=kwd-40012020&intent=General+Name+Searches&source=WFP2019-LB-NATL-GS-US-GEN&subsource=71352540229-elizabeth%20warren-e-405340466863&refcode=WFP2019-LB-NATL-GS-US-GEN&refcode2=71352540229-elizabeth%20warren-e-405340466863&utm_source=Google&utm_campaign=WFP2019-LB-NATL-GS-US-GEN&utm_term=elizabeth%20warren-405340466863&utm_medium=Search&gclid=CjwKCAiA1fnxBRBBEiwAVUouUsEfcVY-jFP8190K5G6xR_8tsVF7AjhRV6CIHHAeubRGxzujsFpjwBoCWKUQAvD_BwE',
-		issues: [
-			{
-				name: 'economy',
-				opinion: 'Tax on the ultra-wealthy (households over $50 million)'
-			},
-			{
-				name: 'civil rights',
-				opinion: 'Fully fund the Office of Civil Rights of the Department of Education'
-			},
-			{
-				name: 'education',
-				opinion: 'Free college through the tax on the ultra-wealthy'
-			},
-			{
-				name: 'climate',
-				opinion: 'Green New Deal, Clean up Manufacturing Industry'
-			},
-			{
-				name: 'foreign policy',
-				opinion: 'Reassess current military involvements, audit Pentagon budget, '
-			},
-			{
-				name: 'healthcare',
-				opinion: 'Medicare For All, Federally regulate insurance companies'
-			},
-			{
-				name: 'guns',
-				opinion: 'Universal background checks, investigate the NRA'
-			}
-
-=======
 		website: 'https://elizabethwarren.com/',
 		keyIssues: 'Climate Change, Education',
 		issues: [
@@ -206,46 +141,12 @@ export default [
 				opinion:
 					'Recommit to Paris Agreement, net zero emissions by 2050, refuse campaign contributions from oil companies'
 			}
->>>>>>> 7451c1d095a805dc222074d4465e94c37d6ab980
 		]
 	},
 	{
 		pic: 'https://www.whitehouse.gov/sites/whitehouse.gov/files/images/45/PE%20Color.jpg',
 		name: 'Donald Trump',
 		party: 'Republican',
-<<<<<<< HEAD
-		keyIssues: 'foo, bar,asdf',
-		issues: [
-			{
-				name: 'economy',
-				opinion: 'Lower individual and corporate taxes, cut regulations, end trade deficits'
-			},
-			{
-				name: 'civil rights',
-				opinion: 'Limit access to abortion, ban on transgender troops in the military'
-			},
-			{
-				name: 'education',
-				opinion: 'Budget cuts, Localized education'
-			},
-			{
-				name: 'climate',
-				opinion: 'Green New Deal, Clean up Manufacturing Industry'
-			},
-			{
-				name: 'foreign policy',
-				opinion: 'America First, Priotitize economic interests '
-			},
-			{
-				name: 'healthcare',
-				opinion: 'Undo Obamacare, cut drug prices, reform Medicaid'
-			},
-			{
-				name: 'guns',
-				opinion: 'Looking at policies for stricter gun control'
-			}
-
-=======
 		website: 'https://www.donaldjtrump.com/',
 		keyIssues: 'Economy, Taxes, Trade',
 		issues: [
@@ -265,7 +166,6 @@ export default [
 				name: 'Military',
 				opinion: 'Increase military spending'
 			}
->>>>>>> 7451c1d095a805dc222074d4465e94c37d6ab980
 		]
 	}
 ];
