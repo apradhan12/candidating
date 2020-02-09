@@ -58,34 +58,6 @@ function App() {
     <div class="container">
       <header>
         <h1>Sign Up</h1>
-        {/* <Formik
-          initialValues={initialValues}
-          validate={validate}
-          onSubmit={onSubmit}
-          validateOnChange={false}
-          validateOnBlur={true}>
-          {({isSubmitting}) => (
-            <Form className="App-body">
-              <label>Name: </label><br />
-              <Field name="name" />
-              <ErrorMessage name="name" component="div" />
-              <label>ZIP Code: </label><br />
-              <Field name="zipCode" maxLength="5" />
-              <ErrorMessage name="zipCode" component="div" />
-              <label>City: </label><br />
-              <Field name="city" />
-              <ErrorMessage name="city" component="div" />
-              <label>State: </label><br />
-              <Field as="select" name="state">
-                {Object.keys(US_STATES).map((usState, i) => (<option value={usState} key={i}>{usState}</option>))}
-              </Field>
-              <ErrorMessage name="state" component="div" />
-              <button type="submit" disabled={isSubmitting}>
-                Submit
-              </button>
-            </Form>
-          )}
-        </Formik> */}
         <form class="App-body p-2 rounded">
           <h3>Information</h3>
           <label htmlFor="name">

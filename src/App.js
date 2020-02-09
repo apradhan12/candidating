@@ -12,6 +12,7 @@ function App() {
 	  <Router>
 		<div>
 		  <Switch>
+      <nav className="navbar navbar-light">Candidating</nav>
 			<Route exact path="/">
 			  <div className="App">
 				  <h1><b>Candidating</b></h1>
