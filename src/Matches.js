@@ -1,7 +1,7 @@
 import './Matches.css';
 
 import React from 'react';
-import data from './localData.js';
+import data from './data.js';
 
 class Matches extends React.Component {
 	render() {

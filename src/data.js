@@ -46,6 +46,7 @@ export default [
 
 		name: 'Pete Buttigieg',
 		party: 'Democrat',
+		keyIssues: 'foo, bar,asdf',
 		Website: 'https://peteforamerica.com/meet-pete/',
 		issues: 
 		[
@@ -84,7 +85,8 @@ export default [
 		pic:
 			'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.biography.com%2F.image%2Ft_share%2FMTI5ODcyMjQ1NDQ2MjA5NTA2%2Fbernie-sanders-official-senate-photojpg.jpg&f=1&nofb=1',
 		name: 'Bernie Sanders',
-		party: 'Independent',
+		party: 'Democrat',
+		keyIssues: 'foo, bar,asdf',
 		website: 'https://berniesanders.com/?nosplash',
 		issues: []
 	},
@@ -93,12 +95,14 @@ export default [
 			'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F985858875445293056%2FRUqnwGsy_400x400.jpg&f=1&nofb=1',
 		name: 'Elizabeth Warren',
 		party: 'Democrat',
+		keyIssues: 'foo, bar,asdf',
 		issues: []
 	},
 	{
 		pic: 'https://www.whitehouse.gov/sites/whitehouse.gov/files/images/45/PE%20Color.jpg',
 		name: 'Donald Trump',
 		party: 'Republican',
+		keyIssues: 'foo, bar,asdf',
 		issues: []
 	}
 ];
