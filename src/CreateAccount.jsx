@@ -1,9 +1,10 @@
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
 import React from 'react';
-import {Formik, Form, Field, ErrorMessage} from 'formik';
 import './CreateAccount.css';
 import US_STATES from './us_states';
+import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
+
 
 function App() {
   const initialValues = {
@@ -53,8 +54,6 @@ function App() {
   </div>
 </div>  ))
 
-
-
   return (
     <div class="container">
       <header>
@@ -103,7 +102,11 @@ function App() {
           </label>
           <h3>Policy Importance (0-10)</h3>
           {sliderAttributeHTML}
-          <input className="App-button" type="submit" value="Create Profile" class="btn btn-primary" />
+          <button className = "App-button">
+						<Link to="/matching">
+						  <button className="btn btn-primary">Create Profile</button>
+						</Link>
+					</button>
         </form>
       </header>
     </div>

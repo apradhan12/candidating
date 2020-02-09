@@ -2,14 +2,18 @@ import { animated, interpolate } from 'react-spring/hooks';
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import data from './data';
 
 class Card extends React.Component {
 	render() {
+		const tbody = [];
 		const { i, x, y, rot, scale, trans, bind, data } = this.props;
 		const { keyIssues, pic, issues } = data[i];
 
 		console.log(issues);
-
+		for(let i = 0; i<issues.length; i++) {
+			tbody.push(issues[i].name + ":" + issues[i].opinion + "\n")
+		}
 		return (
 			<animated.div
 				key={i}
@@ -36,6 +40,10 @@ class Card extends React.Component {
 							<span className="key-issues">
 								<b>Key Issues:</b> {keyIssues}
 							</span>
+							{tbody}
+								
+							
+							
 							<span />
 						</div>
 					</div>

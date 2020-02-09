@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 import Card from './Card';
 import ViewMatchesCard from './ViewMatchesCard';
-import data from './localData.js';
+import data from './data';
 import { useGesture } from 'react-with-gesture';
 import { useSprings } from 'react-spring/hooks';
 

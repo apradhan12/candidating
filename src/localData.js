@@ -7,32 +7,20 @@ export default [
 		website: 'https://ayannapressley.com/',
 		issues: [
 			{
-				name: 'Economy',
-				opinion: 'foo'
-			},
-			{
 				name: 'Civil Rights',
-				opinion: 'bar'
-			},
-			{
-				name: 'Education',
-				opinion: 'asdf'
-			},
-			{
-				name: 'Environment',
-				opinion: 'asdf'
+				opinion: 'Supports National Anthem protests and lowering voting age to 16'
 			},
 			{
 				name: 'Foreign Policy',
-				opinion: 'asdf'
+				opinion: 'Condemns divestment and sanctions on the Middle East'
 			},
 			{
 				name: 'Healthcare',
-				opinion: 'asdf'
+				opinion: 'Supports Medicare for all'
 			},
 			{
-				name: 'Guns',
-				opinion: 'asdf'
+				name: 'Immigration',
+				opinion: 'Wants to defund Immigration and Customs Enforcement (ICE)'
 			}
 		]
 	},
@@ -41,6 +29,20 @@ export default [
 		name: 'Michael Capuano',
 		party: 'Democrat',
 		keyIssues: 'Labor rights, Unions, Abortion rights',
-		website: 'https://mikecapuano.com/splash/'
+		website: 'https://mikecapuano.com/splash/',
+		issues: [
+			{
+				name: 'Economy',
+				opinion: 'Fiscally conservative'
+			},
+			{
+				name: 'Civil Rights',
+				opinion: 'Strong supporter of labor rights, unions, gay marriage, and abortion rights'
+			},
+			{
+				name: 'Foreign Policy',
+				opinion: 'Wants to increase foreign aid spending'
+			}
+		]
 	}
 ];
