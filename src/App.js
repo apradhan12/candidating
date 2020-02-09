@@ -13,7 +13,10 @@ function App() {
 			<div>
 				<nav className="navbar navbar-light">
 					<b>
-						Candidating <span role="img">❤️</span>
+						Candidating{' '}
+						<span role="img" aria-label="heart" aria-labelledby="heart">
+							❤️
+						</span>
 					</b>
 				</nav>
 				<Switch>
