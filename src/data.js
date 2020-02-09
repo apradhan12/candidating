@@ -38,7 +38,6 @@ export default [
 				opinion: 'Ban on assault weapons, universal background checks'
 			}
 		]
-		
 	},
 
 	{
