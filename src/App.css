@@ -25,6 +25,12 @@
 	color: white;
 }
 
+.App-slider {
+	display: flex;
+	flex-direction: row;
+	margin-left: 8pt;
+}
+
 .App-link {
 	color: #61dafb;
 }

@@ -6,6 +6,7 @@ import CreateAccount from './CreateAccount';
 import Deck from './Deck';
 import Matches from './Matches';
 import React from 'react';
+import { StickyContainer, Sticky } from 'react-sticky';
 
 function App() {
 	return (

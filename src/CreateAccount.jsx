@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
-import React from 'react';
+import  React, { useState } from 'react';
 import './CreateAccount.css';
 import US_STATES from './us_states';
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
@@ -45,14 +45,35 @@ function App() {
                             "Environment",
                             "Foreign Policy",
                             "Healthcare",
-                            "Gun Control"
+                            "Gun Control",
                           ]
-  const sliderAttributeHTML = sliderAttributes.map((name) =>  ( <div class="row">
-  <div class="form-group col-lg-2">
-    <label for={name}>{name}:</label>
-    <input type="range" class="form-control-range" id={name} min="0" max="10" />
-  </div>
-</div>  ))
+
+  const [sliderStates, setSliderStates] = useState({})
+  const refs = {}
+  const sliderAttributeHTML = sliderAttributes.map((name) =>  {
+    console.log("hi");
+    refs[name] = React.createRef();
+    return ( 
+    <div class="row">
+      <div class="form-group col-lg-2">
+        <label for={name}>{name}:</label>
+          <div className="App-slider">
+          <input className="App-slider"
+            type="range" class="form-control-range" id={name} min="0" max="10" value={sliderStates[name]}
+            onChange={(event) => {
+              console.log("slider states:", event.target.value);
+              const newSliderStates = sliderStates;
+              newSliderStates[name] = event.target.value;
+              setSliderStates(newSliderStates);
+              refs[name].current.innerHTML = sliderStates[name];
+            }}
+          />
+          <label className="App-slider" ref={refs[name]}>5</label>
+        </div>
+      </div>
+    </div>
+  ) } )
+
 
   return (
     <div class="container">
@@ -74,11 +95,11 @@ function App() {
           </label>
           <h3>Policy Importance (0-10)</h3>
           {sliderAttributeHTML}
-          <button className = "App-button">
+          <div>
 						<Link to="/matching">
 						  <button className="btn btn-primary">Create Profile</button>
 						</Link>
-					</button>
+					</div>
         </form>
       </header>
     </div>
