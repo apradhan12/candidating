@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Flag from './usflag.png';
 import './CurrentRepresentatives.css';
+
+const [pageState, setPageState] = useState(<div></div>)
+
+setPageState()
 
 function CurrentRepresentatives() {
   const electionData = require('./testElectionData.json');
@@ -45,32 +49,6 @@ function CurrentRepresentatives() {
 
     tbody.push(...tableRowsForOffice);
   }
-
-  // for (let i = 0; i < this.props.location.state.matches.length; i++) {
-  //   tbody.push(
-  //     <tr key={i}>
-  //       <td>
-  //         <div>
-  //           <img
-  //             className="candidate-icon"
-  //             alt="candidate"
-  //             src={data[this.props.location.state.matches[i]].pic}
-  //           />
-  //         </div>
-  //       </td>
-  //       <td>
-  //         <a
-  //           href={data[this.props.location.state.matches[i]].website}
-  //           rel="noopener noreferrer"
-  //           target="_blank"
-  //         >
-  //           {data[this.props.location.state.matches[i]].name}
-  //         </a>
-  //       </td>
-  //       <td>{data[this.props.location.state.matches[i]].party}</td>
-  //     </tr>
-  //   );
-  // }
 
   const locationInfo = (
     <header>
