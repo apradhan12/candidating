@@ -1,8 +1,77 @@
 import React from 'react';
+import Flag from './usflag.png';
+import './CurrentRepresentatives.css';
 
 function CurrentRepresentatives() {
-  const electionData = {};
-  const location = `${electionData.normalizedInput.city}, ${electionData.normalizedInput.state} ${electionData.normalizedInput.zip}`
+  const electionData = require('./testElectionData.json');
+  const location = `${electionData.normalizedInput.city}, ${electionData.normalizedInput.state} ${electionData.normalizedInput.zip}`;
+
+  const tbody = [];
+
+  for (const office of electionData.offices) {
+    const tableRowsForOffice = [];
+    for (const officialIndex of office.officialIndices) {
+      const official = electionData.officials[officialIndex];
+      let nameHtml;
+      if (official.urls) {
+        nameHtml = (<a href={official.urls[0]} target="_blank">{official.name}</a>);
+      } else {
+        nameHtml = (<span>{official.name}</span>);
+      }
+
+      tableRowsForOffice.push(
+        [
+          <td><img src={official.photoUrl || Flag} alt="Candidate photo" className="candidate-icon" /></td>,
+          <td>{nameHtml}</td>,
+          <td>{official.party}</td>,
+        ]
+      );
+    }
+    if (tableRowsForOffice.length > 0) {
+      tableRowsForOffice[0] = (
+        <tr>
+          <td rowSpan={tableRowsForOffice.length}>{office.name}</td>
+          {tableRowsForOffice[0]}
+        </tr>
+      );
+      for (let i = 1; i < tableRowsForOffice.length; i++) {
+        tableRowsForOffice[i] = (
+          <tr>
+            {tableRowsForOffice[i]}
+          </tr>
+        );
+      }
+    }
+
+    tbody.push(...tableRowsForOffice);
+  }
+
+  // for (let i = 0; i < this.props.location.state.matches.length; i++) {
+  //   tbody.push(
+  //     <tr key={i}>
+  //       <td>
+  //         <div>
+  //           <img
+  //             className="candidate-icon"
+  //             alt="candidate"
+  //             src={data[this.props.location.state.matches[i]].pic}
+  //           />
+  //         </div>
+  //       </td>
+  //       <td>
+  //         <a
+  //           href={data[this.props.location.state.matches[i]].website}
+  //           rel="noopener noreferrer"
+  //           target="_blank"
+  //         >
+  //           {data[this.props.location.state.matches[i]].name}
+  //         </a>
+  //       </td>
+  //       <td>{data[this.props.location.state.matches[i]].party}</td>
+  //     </tr>
+  //   );
+  // }
+
   const locationInfo = (
     <header>
       <h1>Your current representatives</h1><br />
@@ -11,54 +80,19 @@ function CurrentRepresentatives() {
   );
 
   return (
-    <div className="container">
-				<header>
-					<h1>Sign Up</h1>
-        </header>
-					<form className="App-body p-2 rounded" onSubmit={this.onSubmit}>
-						<h3>Information</h3>
-						<label htmlFor="name" class="m-1">
-							Name:
-							<input
-								type="text"
-								name="name"
-								id="name"
-								placeholder="Enter your name"
-								className="form-control"
-							/>
-						</label>
-						<label htmlFor="city" class="m-1">
-							City:
-							<input
-								type="text"
-								name="city"
-								id="city"
-								placeholder="Enter your city"
-								className="form-control"
-							/>
-						</label>
-            <label htmlFor="usState" class="m-1">
-							State:
-              <select name="state" class="form-control">
-                {US_STATES_FORM_DATA}
-              </select>
-						</label>
-						<label htmlFor="zipCode" class="m-1">
-							ZIP Code:
-							<input
-								type="text"
-								name="zipCode"
-								id="zipCode"
-								placeholder="Enter your zip code"
-								className="form-control"
-							/>
-						</label>
-						<h3>Policy Importance (0-10)</h3>
-						{sliderAttributeHTML}
-						{/* <Link to="/matching"> */}
-						<button className="btn btn-primary">Create Profile</button>
-						{/* </Link> */}
-					</form>
-			</div>
+    <div className="container current-reps">
+      {locationInfo}
+      <table className="table">
+        <thead>
+          <th>Office</th>
+          <th></th>
+          <th>Name</th>
+          <th>Party</th>
+        </thead>
+        <tbody>{tbody}</tbody>
+      </table>
+    </div>
   );
 }
+
+export default CurrentRepresentatives;
