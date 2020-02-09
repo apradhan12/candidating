@@ -45,7 +45,7 @@ function App() {
                             "Environment",
                             "Foreign Policy",
                             "Healthcare",
-                            "Gun Control"
+                            "Gun Control",
                           ]
 
   const [sliderStates, setSliderStates] = useState({})
@@ -73,7 +73,7 @@ function App() {
       </div>
     </div>
   ) } )
-  
+
 
   return (
     <div class="container">
@@ -95,11 +95,11 @@ function App() {
           </label>
           <h3>Policy Importance (0-10)</h3>
           {sliderAttributeHTML}
-          <button className = "App-button">
+          <div>
 						<Link to="/matching">
 						  <button className="btn btn-primary">Create Profile</button>
 						</Link>
-					</button>
+					</div>
         </form>
       </header>
     </div>
