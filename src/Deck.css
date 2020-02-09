@@ -57,8 +57,8 @@ body {
 }
 
 img {
-	height: 380px;
-	width: 100%;
+	margin: 0 auto;
+	height: 200px;
 	display: block;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
@@ -92,11 +92,11 @@ h5:last-of-type {
 }
 
 .candidate-card > div {
-	height: 380px !important;
+	height: 200px !important;
 }
 
 img.blur {
-	filter: blur(13px) opacity(40%);
+	filter: blur(23px) opacity(40%);
 }
 
 .candidate-card {
@@ -111,8 +111,12 @@ img.blur {
 	color: salmon !important;
 }
 
-a {
+.candidate-card a {
 	display: block;
 	text-align: center;
 	padding-top: calc(83%);
+}
+
+.key-issues {
+	font-size: 14px;
 }

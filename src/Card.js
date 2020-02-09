@@ -6,7 +6,9 @@ import React from 'react';
 class Card extends React.Component {
 	render() {
 		const { i, x, y, rot, scale, trans, bind, data } = this.props;
-		const { text, pic } = data[i];
+		const { keyIssues, pic, issues } = data[i];
+
+		console.log(issues);
 
 		return (
 			<animated.div
@@ -27,8 +29,12 @@ class Card extends React.Component {
 						<div>
 							<img src={pic} className="blur" alt="profilePicture" />
 						</div>
+						<br />
 						<div>
-							<h5>{text}</h5>
+							<span className="key-issues">
+								<b>Key Issues:</b> {keyIssues}
+							</span>
+							<span />
 						</div>
 					</div>
 				</animated.div>
