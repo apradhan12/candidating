@@ -30,3 +30,7 @@ tr {
 .table th {
 	vertical-align: inherit;
 }
+
+.register {
+	text-align: center;
+}

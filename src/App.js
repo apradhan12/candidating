@@ -1,36 +1,41 @@
 import './App.css';
 
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
+import CreateAccount from './CreateAccount';
 import Deck from './Deck';
 import Matches from './Matches';
 import React from 'react';
 
 function App() {
 	return (
-		<Router>
-			<div>
-				<Switch>
-					<Route path="/">
-						<div className="App">
-							<h1>Sign In</h1>
-							<header className="App-header">
-								<form>
-									<label>
-										Name:
-										<input type="text" name="name" />
-									</label>
-									<input type="submit" value="Submit" />
-								</form>	
-							</header>
-						</div>
-					</Route>
-					<Route path="/matching">
-						<Deck />
-					</Route>
-					<Route path="/matches" component={Matches} />
-				</Switch>
-			</div>
+	  <Router>
+		<div>
+		  <Switch>
+			<Route exact path="/">
+			  <div className="App">
+				  <h1><b>Candidating</b></h1>
+				  <button className = "App-button">
+					<Link to="/createaccount">
+					  <button className="btn btn-primary">Sign Up</button>
+					</Link>
+				  </button>
+				  <button className = "App-button">
+					<Link to="/createaccount">
+					  <button className="btn btn-primary">Sign In</button>
+					</Link>
+				  </button>
+			  </div>
+			</Route>
+      		<Route path="/createaccount">
+				<CreateAccount />
+			</Route>
+			<Route path="/matching">
+				<Deck />
+			</Route>
+			<Route path="/matches" component={Matches} />
+		  </Switch>
+		</div>
 		</Router>
 	);
 }
