@@ -1,5 +1,6 @@
 import './Matches.css';
 
+import { Link } from 'react-router-dom';
 import React from 'react';
 import data from './data.js';
 
@@ -41,10 +42,15 @@ class Matches extends React.Component {
 						<thead />
 						<tbody>{tbody}</tbody>
 					</table>
-					<div class="register">
+					<div className="register">
 						<a href="https://vote.gov/" rel="noopener noreferrer" target="_blank">
 							Register to vote!
 						</a>
+					</div>
+					<div className="reset-wrapper">
+						<Link to="/matching">
+							<button className="btn btn-primary">Reset Matches</button>
+						</Link>
 					</div>
 				</div>
 			</div>

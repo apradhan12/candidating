@@ -49,7 +49,6 @@ body {
 	max-height: 600px;
 	will-change: transform;
 	border-radius: 10px;
-	/* box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3); */
 }
 
 .view-matches {
@@ -96,17 +95,17 @@ h5:last-of-type {
 }
 
 img.blur {
-  filter: blur(18px) opacity(40%);
+	filter: blur(18px) opacity(40%);
 }
 
 div.candidate-image {
-  overflow: hidden;
-  display: inline-block;
-  margin: auto;
+	overflow: hidden;
+	display: inline-block;
+	margin: auto;
 }
 
 div.candidate-image-wrapper {
-  text-align: center;
+	text-align: center;
 }
 
 .candidate-card {
@@ -128,5 +127,6 @@ div.candidate-image-wrapper {
 }
 
 .key-issues {
+	padding: 0 10px;
 	font-size: 14px;
 }
