@@ -26,9 +26,11 @@ class Card extends React.Component {
 					}}
 				>
 					<div className="candidate-card">
-						<div>
-							<img src={pic} className="blur" alt="profilePicture" />
-						</div>
+            <div className="candidate-image-wrapper">
+              <div className="candidate-image rounded">
+                <img src={pic} className="blur" alt="profilePicture" />
+              </div>
+            </div>
 						<br />
 						<div>
 							<span className="key-issues">

@@ -96,7 +96,17 @@ h5:last-of-type {
 }
 
 img.blur {
-	filter: blur(23px) opacity(40%);
+  filter: blur(18px) opacity(40%);
+}
+
+div.candidate-image {
+  overflow: hidden;
+  display: inline-block;
+  margin: auto;
+}
+
+div.candidate-image-wrapper {
+  text-align: center;
 }
 
 .candidate-card {
