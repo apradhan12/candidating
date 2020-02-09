@@ -47,7 +47,7 @@ class CreateAccount extends React.Component {
 			refs[name] = React.createRef();
 			return (
 				<div className="row" key={name}>
-					<div className="col-lg-3">
+					<div className="col-lg-11">
 						<label htmlFor={name}>{name}:</label>
             <br />
 							<input
@@ -64,7 +64,7 @@ class CreateAccount extends React.Component {
 									refs[name].current.innerHTML = this.state.sliderStates[name];
 								}}
 							/>
-            <label className="App-slider-label" ref={refs[name]} />
+            <label className="App-slider-label" ref={refs[name]}>0</label>
 					</div>
 				</div>
 			);
@@ -86,8 +86,8 @@ class CreateAccount extends React.Component {
 		return (
 			<div className="container">
 				<header>
-					<h1>Sign Up</h1>
-					<form className="App-body p-2 rounded" onSubmit={this.onSubmit}>
+					<h1 className="App-signup">Sign Up</h1>
+					<form className="App-body p-3 rounded" onSubmit={this.onSubmit}>
 						<h3>Information</h3>
 						<label htmlFor="name" class="m-1">
 							Name:
@@ -127,9 +127,7 @@ class CreateAccount extends React.Component {
 						</label>
 						<h3>Policy Importance (0-10)</h3>
 						{sliderAttributeHTML}
-						{/* <Link to="/matching"> */}
 						<button className="btn btn-primary">Create Profile</button>
-						{/* </Link> */}
 					</form>
 				</header>
 			</div>

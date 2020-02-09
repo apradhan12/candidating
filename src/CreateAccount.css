@@ -3,27 +3,32 @@
 }
 */
 .App-header {
-    background-color: #282c34;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: right;
     justify-content: left;
     font-size: calc(10px + 2vmin);
-    color: gainsboro;
     overflow: scroll;
 }
 
 .App-body {
-    background-color: gainsboro;
+    background-color: rgba(255, 255, 255, 0.747);
     color: #282c34;
-    /* min-height: 25vh;
-    min-width: 10vh;
-    align-items: right; */
-    overflow: scroll;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 500px;
 }
-/*
+
+.container {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .App-button {
     color: #282c34;
     text-align: right;
-} */
+}
