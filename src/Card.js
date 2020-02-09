@@ -4,44 +4,39 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import data from './data';
 
-
 class Card extends React.Component {
-
 	render() {
-
 		const tbody = [];
-		const tbodyopinion = []
+		const tbodyopinion = [];
 		const { i, x, y, rot, scale, trans, bind, data } = this.props;
 		const { keyIssues, pic, issues } = data[i];
 
 		console.log(issues);
 		for (let i = 0; i < issues.length; i++) {
-			const tbodyname = issues[i].name
-			const tbodyopinion = issues[i].opinion
+			const tbodyname = issues[i].name;
+			const tbodyopinion = issues[i].opinion;
 
-			tbody.push(<tr><td>{tbodyname}</td>
-				<td>{tbodyopinion}</td></tr>)
-
-
+			tbody.push(
+				<tr>
+					<td>{tbodyname}</td>
+					<td>{tbodyopinion}</td>
+				</tr>
+			);
 		}
-
-
-
-
 
 		return (
 			<animated.div
 				key={i}
 				className="card-wrapper"
 				style={{
-					transform: interpolate([x, y], (x, y) => `translate3d(${x}px,0px,0)`)
+					transform: interpolate([ x, y ], (x, y) => `translate3d(${x}px,0px,0)`)
 				}}
 			>
 				<animated.div
 					{...bind(i)}
 					className="inner-card-wrapper"
 					style={{
-						transform: interpolate([rot, scale], trans)
+						transform: interpolate([ rot, scale ], trans)
 					}}
 				>
 					<div className="candidate-card">
@@ -65,20 +60,12 @@ class Card extends React.Component {
 												<th>Issue</th>
 
 												<th>Opinion</th>
-
 											</tr>
-
 										</thead>
-										<tbody>
-											{tbody}
-										</tbody>
+										<tbody>{tbody}</tbody>
 									</table>
-
 								</div>
 							</div>
-
-
-
 
 							<span />
 						</div>

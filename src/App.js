@@ -6,13 +6,16 @@ import CreateAccount from './CreateAccount';
 import Deck from './Deck';
 import Matches from './Matches';
 import React from 'react';
-import { StickyContainer, Sticky } from 'react-sticky';
 
 function App() {
 	return (
 		<Router>
 			<div>
-				<nav className="navbar navbar-light"><b>Candidating</b></nav>
+				<nav className="navbar navbar-light">
+					<b>
+						Candidating <span role="img">❤️</span>
+					</b>
+				</nav>
 				<Switch>
 					<Route exact path="/">
 						<div className="App">
