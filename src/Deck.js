@@ -3,8 +3,10 @@ import './Deck.css';
 import React, { useState } from 'react';
 
 import Card from './Card';
+import SelectElectionCard from './SelectElectionCard';
 import ViewMatchesCard from './ViewMatchesCard';
 import data from './data';
+import localData from './localData';
 import { useGesture } from 'react-with-gesture';
 import { useSprings } from 'react-spring/hooks';
 
@@ -15,8 +17,6 @@ function shuffle(a) {
 	}
 	return a;
 }
-
-shuffle(data);
 
 const to = (i) => ({
 	x: 0,
@@ -29,7 +29,12 @@ const from = (i) => ({ rot: 0, scale: 1.5, y: -1000 });
 
 const trans = (r, s) => `scale(${s})`;
 
+shuffle(data);
+
 function Deck() {
+	// let dataToUse =
+	let [ , setState ] = useState();
+
 	const [ gone ] = useState(() => new Set());
 
 	const [ matches, setMatches ] = useState([]);
@@ -38,6 +43,16 @@ function Deck() {
 		...to(i),
 		from: from(i)
 	}));
+
+	// const parentCallback = (info) => {
+	// 	if (info.value === '1') {
+	// 		dataToUse = data;
+	// 	} else {
+	// 		dataToUse = localData;
+	// 	}
+	// 	console.log(dataToUse);
+	// 	console.log(props);
+	// };
 
 	const bind = useGesture(({ args: [ index ], down, delta: [ xDelta ], direction: [ xDir ], velocity }) => {
 		const trigger = velocity > 0.2;
@@ -65,18 +80,25 @@ function Deck() {
 			};
 			return obj;
 		});
-	});
 
-	// console.log(matches);
+		// if (gone.size === data.length) setTimeout(() => gone.clear() || set((i) => to(i)), 600);
+	});
 
 	const cards = [ <ViewMatchesCard key="foo" matches={matches} /> ];
 
+	// if (dataToUse.length) {
+	// console.log(dataToUse);
 	// The Deck
 	cards.push(
 		props.map(({ x, y, rot, scale }, i) => (
 			<Card i={i} x={x} y={y} rot={rot} scale={scale} trans={trans} data={data} bind={bind} key={i} />
 		))
 	);
+	// }
+
+	// if (!dataToUse.length) {
+	// cards.push(<SelectElectionCard key="bar" parentCallback={parentCallback} />);
+	// }
 
 	return cards;
 }

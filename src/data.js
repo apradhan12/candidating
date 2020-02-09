@@ -4,37 +4,32 @@ export default [
 			'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F0%2F0d%2FJoe_Biden%2C_official_photo_portrait_2-cropped.jpg&f=1&nofb=1',
 		name: 'Joe Biden',
 		party: 'Democrat',
-		keyIssues: 'foo, bar, asdf',
+		keyIssues: 'Free Trade, Medicare for all, Campaign Finance Reform',
 		website: 'https://joebiden.com/',
-		issues: 
-		[
+		issues: [
 			{
-				name: 'economy',
+				name: 'Economy',
 				opinion: 'Close tax loopholes'
 			},
 
 			{
-				name: 'civil rights',
-				opinion: 'Opposed to govermnet funded abortion, Oppposed to Trump\'s moral equivalency'
+				name: 'Civil Rights',
+				opinion: "Opposed to govermnet funded abortion, Oppposed to Trump's moral equivalency"
 			},
 			{
-				name: 'education',
+				name: 'Education',
 				opinion: 'Erase debt for low-income individuals'
 			},
 			{
-				name: 'climate',
-				opinion: 'Recommit to Paris Agreement, net zero emissions by 2050, refuse campaign contributions from oil companies'
-			},
-			{
-				name: 'foreign policy',
+				name: 'Foreign Policy',
 				opinion: 'Supports NATO, End support for Saudi war'
 			},
 			{
-				name: 'healthcare',
+				name: 'Healthcare',
 				opinion: 'Expand Affordable Care Act by offering public option'
 			},
 			{
-				name: 'guns',
+				name: 'Gun Control',
 				opinion: 'Ban on assault weapons, universal background checks'
 			}
 		]
@@ -46,50 +41,72 @@ export default [
 
 		name: 'Pete Buttigieg',
 		party: 'Democrat',
-		keyIssues: 'foo, bar,asdf',
-		Website: 'https://peteforamerica.com/meet-pete/',
-		issues: 
-		[
+		keyIssues: 'Civil Rights, Economy',
+		website: 'https://peteforamerica.com/meet-pete/',
+		issues: [
 			{
-				name: 'economy',
-				opinion: '$15 minimum wage, End \'right-to work\' laws'
+				name: 'Economy',
+				opinion: "$15 minimum wage, End 'right-to work' laws"
 			},
 			{
-				name: 'civil rights',
+				name: 'Civil Rights',
 				opinion: 'Designate Health Equity Zones for minoirities, pro-choice'
 			},
 			{
-				name: 'education',
+				name: 'Education',
 				opinion: 'Eliminate tuition cost at public universities for low-income families'
 			},
 			{
-				name: 'climate',
+				name: 'Climate',
 				opinion: 'Quadruple federal clean energy R&D funding'
 			},
 			{
-				name: 'foreign policy',
+				name: 'Foreign Policy',
 				opinion: 'Fundamental rethink to foreign policy that would end ongoing wars'
 			},
 			{
-				name: 'healthcare',
+				name: 'Healthcare',
 				opinion: 'Medicare for All Who Want It'
 			},
 			{
-				name: 'guns',
-				opinion: 'Universal background checks, Counter hate and extremeism'
+				name: 'Guns',
+				opinion: 'Universal background checks, Counter hate and extremism'
 			}
 		]
-	
+	},
+	{
+		pic:
+			'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Amy_Klobuchar%2C_official_portrait%2C_113th_Congress.jpg/1024px-Amy_Klobuchar%2C_official_portrait%2C_113th_Congress.jpg',
+		name: 'Amy Klobuchar',
+		party: 'Democrat',
+		keyIssues: 'Healthcare, abortion rights, LGBTQA+ rights',
+		website: 'https://amyklobuchar.com/',
+		issues: [
+			{
+				name: 'Healthcare',
+				opinion: 'Expand Affordable Care Act by offering public option'
+			},
+			{
+				name: 'Gun Control',
+				opinion: 'Ban on assault weapons, universal background checks'
+			},
+			{
+				name: 'Climate',
+				opinion:
+					'Recommit to Paris Agreement, net zero emissions by 2050, refuse campaign contributions from oil companies'
+			}
+		]
 	},
 	{
 		pic:
 			'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.biography.com%2F.image%2Ft_share%2FMTI5ODcyMjQ1NDQ2MjA5NTA2%2Fbernie-sanders-official-senate-photojpg.jpg&f=1&nofb=1',
 		name: 'Bernie Sanders',
 		party: 'Democrat',
-		keyIssues: 'foo, bar,asdf',
+		keyIssues: 'Medicare for all, Free education, public transit infrastructure',
 		website: 'https://berniesanders.com/?nosplash',
 		issues: [
 			{
+<<<<<<< HEAD
 				name: 'economy',
 				opinion: 'Reform tax code, increase marginal tax rates '
 			},
@@ -118,6 +135,20 @@ export default [
 				opinion: 'Expand background checks, take on the NRA'
 			}
 
+=======
+				name: 'Healthcare',
+				opinion: 'Expand Affordable Care Act by offering public option'
+			},
+			{
+				name: 'Gun Control',
+				opinion: 'Ban on assault weapons, universal background checks'
+			},
+			{
+				name: 'Climate',
+				opinion:
+					'Recommit to Paris Agreement, net zero emissions by 2050, refuse campaign contributions from oil companies'
+			}
+>>>>>>> 7451c1d095a805dc222074d4465e94c37d6ab980
 		]
 	},
 	{
@@ -125,6 +156,7 @@ export default [
 			'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F985858875445293056%2FRUqnwGsy_400x400.jpg&f=1&nofb=1',
 		name: 'Elizabeth Warren',
 		party: 'Democrat',
+<<<<<<< HEAD
 		keyIssues: 'foo, bar,asdf',
 		website: 'https://elizabethwarren.com/?mkwid=slPlgDlZa|pcrid|405340466863|pkw|elizabeth%20warren|pmt|e|pdv|c|slid||product||pgrid|71352540229|ptaid|kwd-40012020|&pgrid=71352540229&ptaid=kwd-40012020&intent=General+Name+Searches&source=WFP2019-LB-NATL-GS-US-GEN&subsource=71352540229-elizabeth%20warren-e-405340466863&refcode=WFP2019-LB-NATL-GS-US-GEN&refcode2=71352540229-elizabeth%20warren-e-405340466863&utm_source=Google&utm_campaign=WFP2019-LB-NATL-GS-US-GEN&utm_term=elizabeth%20warren-405340466863&utm_medium=Search&gclid=CjwKCAiA1fnxBRBBEiwAVUouUsEfcVY-jFP8190K5G6xR_8tsVF7AjhRV6CIHHAeubRGxzujsFpjwBoCWKUQAvD_BwE',
 		issues: [
@@ -157,12 +189,31 @@ export default [
 				opinion: 'Universal background checks, investigate the NRA'
 			}
 
+=======
+		website: 'https://elizabethwarren.com/',
+		keyIssues: 'Climate Change, Education',
+		issues: [
+			{
+				name: 'Civil Rights',
+				opinion: 'Designate Health Equity Zones for minoirities, pro-choice'
+			},
+			{
+				name: 'Education',
+				opinion: 'Eliminate tuition cost at public universities for low-income families'
+			},
+			{
+				name: 'Climate',
+				opinion:
+					'Recommit to Paris Agreement, net zero emissions by 2050, refuse campaign contributions from oil companies'
+			}
+>>>>>>> 7451c1d095a805dc222074d4465e94c37d6ab980
 		]
 	},
 	{
 		pic: 'https://www.whitehouse.gov/sites/whitehouse.gov/files/images/45/PE%20Color.jpg',
 		name: 'Donald Trump',
 		party: 'Republican',
+<<<<<<< HEAD
 		keyIssues: 'foo, bar,asdf',
 		issues: [
 			{
@@ -194,6 +245,27 @@ export default [
 				opinion: 'Looking at policies for stricter gun control'
 			}
 
+=======
+		website: 'https://www.donaldjtrump.com/',
+		keyIssues: 'Economy, Taxes, Trade',
+		issues: [
+			{
+				name: 'Economy',
+				opinion: 'Lower taxes for everyone, especially the rich'
+			},
+			{
+				name: 'Immigration',
+				opinion: 'Only allow legal immigrants'
+			},
+			{
+				name: 'Civil Rights',
+				opinion: 'Reduce access to abortion'
+			},
+			{
+				name: 'Military',
+				opinion: 'Increase military spending'
+			}
+>>>>>>> 7451c1d095a805dc222074d4465e94c37d6ab980
 		]
 	}
 ];

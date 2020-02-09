@@ -37,7 +37,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App">Hello
       <h1>Hello React!</h1>
       <form className="search-form" onSubmit={handleSubmit}>
         <label>City: </label>

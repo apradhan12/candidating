@@ -23,9 +23,9 @@ class CreateAccount extends React.Component {
 			savedData[key] = value;
 		}
 
-		for (let slider of Object.keys(this.state.sliderStates)) {
+		for (const slider of Object.keys(this.state.sliderStates)) {
 			savedData[slider] = this.state.sliderStates[slider];
-		}
+    }
 
 		localStorage.setItem('userProfile', JSON.stringify(savedData));
 		this.setState({ redirectToNewPage: true });
@@ -47,12 +47,12 @@ class CreateAccount extends React.Component {
 			refs[name] = React.createRef();
 			return (
 				<div className="row" key={name}>
-					<div className="col-lg-2">
+					<div className="col-lg-11">
 						<label htmlFor={name}>{name}:</label>
-						<div className="App-slider">
+            <br />
 							<input
-								className="App-slider form-control"
-								type="range"
+                type="range"
+                className="App-slider"
 								id={name}
 								min="0"
 								max="10"
@@ -64,26 +64,32 @@ class CreateAccount extends React.Component {
 									refs[name].current.innerHTML = this.state.sliderStates[name];
 								}}
 							/>
-							<label className="App-slider" ref={refs[name]}>
-								5
-							</label>
-						</div>
+            <label className="App-slider-label" ref={refs[name]}>0</label>
 					</div>
 				</div>
 			);
-		});
+    });
+
+    const US_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL",
+                       "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT",
+                       "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI",
+                       "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"];
+
+    const US_STATES_FORM_DATA = US_STATES.map((usState) => (
+      <option value={usState}>{usState}</option>
+    ));
 
 		if (this.state.redirectToNewPage) {
 			return <Redirect to="/matching" />;
-		}
+    }
 
 		return (
 			<div className="container">
 				<header>
-					<h1>Sign Up</h1>
-					<form className="App-body p-2 rounded" onSubmit={this.onSubmit}>
+					<h1 className="App-signup">Sign Up</h1>
+					<form className="App-body p-3 rounded" onSubmit={this.onSubmit}>
 						<h3>Information</h3>
-						<label htmlFor="name">
+						<label htmlFor="name" class="m-1">
 							Name:
 							<input
 								type="text"
@@ -93,7 +99,7 @@ class CreateAccount extends React.Component {
 								className="form-control"
 							/>
 						</label>
-						<label htmlFor="city">
+						<label htmlFor="city" class="m-1">
 							City:
 							<input
 								type="text"
@@ -103,21 +109,26 @@ class CreateAccount extends React.Component {
 								className="form-control"
 							/>
 						</label>
-						<label htmlFor="zipCode">
+            <label htmlFor="usState" class="m-1">
+							State:
+              <select name="state" class="form-control">
+                {US_STATES_FORM_DATA}
+              </select>
+						</label>
+						<label htmlFor="zipCode" class="m-1">
 							ZIP Code:
 							<input
 								type="text"
 								name="zipCode"
 								id="zipCode"
 								placeholder="Enter your zip code"
-								className="form-control"
+                className="form-control"
+                maxLength="5"
 							/>
 						</label>
 						<h3>Policy Importance (0-10)</h3>
 						{sliderAttributeHTML}
-						{/* <Link to="/matching"> */}
 						<button className="btn btn-primary">Create Profile</button>
-						{/* </Link> */}
 					</form>
 				</header>
 			</div>
