@@ -13,12 +13,14 @@ function App() {
 		<Router>
 			<div>
 				<nav className="navbar navbar-light">
-					<b>
-						Candidating{' '}
-						<span role="img" aria-label="heart" aria-labelledby="heart">
-							❤️
-						</span>
-					</b>
+          <Link to="/" className="no-link">
+            <b>
+              Candidating{' '}
+              <span role="img" aria-label="heart" aria-labelledby="heart">
+                ❤️
+              </span>
+            </b>
+          </Link>
 				</nav>
 				<Switch>
 					<Route exact path="/">

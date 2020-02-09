@@ -19,7 +19,7 @@ export default class CurrentRepresentatives extends React.Component {
   }
 
   updatePage(electionData) {
-    if (electionData && !electionData.error) {
+    if (electionData && !electionData.error && electionData.normalizedInput.city && electionData.normalizedInput.state) {
       console.log(electionData);
       const location = `${electionData.normalizedInput.city}, ${electionData.normalizedInput.state} ${electionData.normalizedInput.zip}`;
       const tbody = [];
@@ -83,7 +83,7 @@ export default class CurrentRepresentatives extends React.Component {
           </table>
         </div>
       )});
-    } else if (electionData.error.message === "Failed to parse address") {
+    } else {
       console.log("address", this.address);
       this.setState({
         pageState: (
